@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sonu Roadlines | India's Trusted Logistics Partner Since 2009</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'><text y='9' font-size='9'>🚚</text></svg>">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: { colors: {
+  navy: { 900:'#0b1f3a', 800:'#10294d', 700:'#17375f' },
+  orange: { 500:'#f97316', 600:'#ea580c' } } } } }
+</script>
+<style>
+html { scroll-behavior: smooth; }
+.fade-in { opacity:0; transform: translateY(18px); transition: all .7s ease; }
+.fade-in.show { opacity:1; transform: none; }
+@keyframes roll { from { transform: translateX(-10%); } to { transform: translateX(10%); } }
+.truck-roll { animation: roll 6s ease-in-out infinite alternate; }
+.step.done { background:#f97316; color:#fff; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-navy-900 text-white shadow-lg" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-2">
+      <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#f97316"/><path d="M8 25h14v-9h6l4 5v4h-2a3 3 0 0 1-6 0h-6a3 3 0 0 1-6 0H8z" fill="#fff"/><circle cx="12" cy="27" r="2.5" fill="#0b1f3a"/><circle cx="28" cy="27" r="2.5" fill="#0b1f3a"/></svg>
+      <div class="leading-tight"><div class="font-extrabold tracking-wide">SONU ROADLINES</div><div class="text-[10px] text-orange-400">Since 2009</div></div>
+    </a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="#book" class="hover:text-orange-400">Book Truck</a>
+      <a href="#fleet" class="hover:text-orange-400">Fleet</a>
+      <a href="#track" class="hover:text-orange-400">Track</a>
+      <a href="#services" class="hover:text-orange-400">Services</a>
+      <a href="#contact" class="hover:text-orange-400">Contact</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <select id="lang" class="bg-navy-700 text-xs rounded px-2 py-1" onchange="setLang(this.value)">
+        <option value="en">EN</option><option value="hi">हिं</option>
+      </select>
+      <a href="https://wa.me/910000000000" target="_blank" class="bg-green-600 hover:bg-green-700 text-xs sm:text-sm px-3 py-2 rounded-lg font-semibold">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-white overflow-hidden">
+  <svg class="absolute right-0 bottom-0 w-[70%] max-w-3xl opacity-20 truck-roll" viewBox="0 0 400 200" fill="#fff" aria-hidden="true">
+    <rect x="20" y="50" width="220" height="110" rx="6"/><path d="M240 80h70l50 50v30h-120z"/>
+    <circle cx="80" cy="170" r="20"/><circle cx="290" cy="170" r="20"/><circle cx="350" cy="170" r="20"/>
+  </svg>
+  <div class="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
+    <p class="text-orange-400 font-semibold tracking-widest text-sm">SONU ROADLINES</p>
+    <h1 class="text-4xl md:text-6xl font-extrabold mt-3 leading-tight">India's Trusted<br><span class="text-orange-500">Logistics Partner</span></h1>
+    <p class="mt-4 text-lg text-slate-200 max-w-xl">Book trucks online, track your consignment, and move goods across India with a fleet we've run since 2009.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="#book" class="bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded-lg font-semibold shadow">Book a Truck</a>
+      <a href="#track" class="border border-white/40 hover:bg-white/10 px-6 py-3 rounded-lg font-semibold">Track Shipment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT + STATS -->
+<section class="max-w-6xl mx-auto px-4 py-16 fade-in">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold text-navy-900">About Sonu Roadlines</h2>
+      <p class="mt-4 text-slate-600 leading-relaxed">Founded in 2009, Sonu Roadlines provides full truck load and part load transportation across India. Our team focuses on on-time delivery, transparent pricing and careful handling of every consignment.</p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white rounded-xl p-6 shadow text-center"><div class="text-3xl font-extrabold text-orange-500" data-count="50">0</div><div class="text-sm text-slate-500">Trucks in Fleet*</div></div>
+      <div class="bg-white rounded-xl p-6 shadow text-center"><div class="text-3xl font-extrabold text-orange-500" data-count="15">0</div><div class="text-sm text-slate-500">Years of Service</div></div>
+      <div class="bg-white rounded-xl p-6 shadow text-center"><div class="text-3xl font-extrabold text-orange-500" data-count="12000">0</div><div class="text-sm text-slate-500">Trips Completed*</div></div>
+      <div class="bg-white rounded-xl p-6 shadow text-center"><div class="text-3xl font-extrabold text-orange-500" data-count="200">0</div><div class="text-sm text-slate-500">Routes Covered*</div></div>
+    </div>
+  </div>
+  <p class="text-xs text-slate-400 mt-4">*Placeholder figures. Replace with your verified company numbers.</p>
+</section>
+
+<!-- BOOKING -->
+<section id="book" class="bg-white py-16">
+  <div class="max-w-4xl mx-auto px-4 fade-in">
+    <h2 class="text-3xl font-bold text-navy-900 text-center">Book a Truck Online</h2>
+    <p class="text-center text-slate-500 mt-2">Get an indicative estimate and a booking ID in under a minute.</p>
+    <form id="bookingForm" class="mt-8 grid md:grid-cols-2 gap-4 bg-slate-50 p-6 rounded-2xl shadow">
+      <label class="text-sm font-medium">Pickup Location<input required name="pickup" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium">Delivery Location<input required name="delivery" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium">Pickup Date<input required type="date" name="date" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium">Approx. Distance (km)<input required type="number" min="1" name="km" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium">Truck Type
+        <select name="type" class="mt-1 w-full border rounded-lg px-3 py-2">
+          <option>Open Body</option><option>Container</option><option>Trailer</option><option>Mini Truck</option>
+        </select></label>
+      <label class="text-sm font-medium">Required Capacity (tonnes)<input required type="number" min="0.5" step="0.5" name="capacity" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium md:col-span-2">Goods Details<textarea required name="goods" rows="2" class="mt-1 w-full border rounded-lg px-3 py-2"></textarea></label>
+      <label class="text-sm font-medium">Customer Name<input required name="name" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <label class="text-sm font-medium">Mobile Number<input required type="tel" pattern="[0-9]{10}" name="mobile" placeholder="10-digit number" class="mt-1 w-full border rounded-lg px-3 py-2"></label>
+      <div class="md:col-span-2 flex flex-wrap items-center justify-between gap-4 mt-2">
+        <div>
+          <div class="text-xs text-slate-500">Indicative estimate</div>
+          <div id="estimate" class="text-2xl font-extrabold text-navy-900">₹ --</div>
+        </div>
+        <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold">Submit Booking Request</button>
+      </div>
+    </form>
+    <div id="bookingResult" class="hidden mt-6 p-5 rounded-xl border-2 border-orange-400 bg-orange-50">
+      <div class="font-semibold">Booking request received</div>
+      <div class="mt-1">Your Booking ID: <span id="newId" class="font-mono font-bold text-navy-900"></span></div>
+      <div class="text-sm text-slate-600">Status: Pending. Our team will confirm and assign a truck shortly.</div>
+    </div>
+    <div class="mt-10">
+      <h3 class="font-bold text-navy-900">Check Booking Status</h3>
+      <form id="statusForm" class="flex gap-2 mt-2">
+        <input required name="id" placeholder="Enter Booking ID (e.g. SR-1234)" class="flex-1 border rounded-lg px-3 py-2 font-mono uppercase">
+        <button class="bg-navy-900 text-white px-5 rounded-lg">Check</button>
+      </form>
+      <div id="statusOut" class="mt-3 text-sm"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FLEET DASHBOARD -->
+<section id="fleet" class="py-16 max-w-6xl mx-auto px-4 fade-in">
+  <div class="flex flex-wrap justify-between items-end gap-4">
+    <div>
+      <h2 class="text-3xl font-bold text-navy-900">Live Truck Fleet</h2>
+      <p class="text-slate-500">Browse available trucks. Only DEMO records are shown until your fleet is connected.</p>
+    </div>
+    <span class="text-xs bg-amber-100 text-amber-800 px-3 py-1 rounded-full">GPS: not connected</span>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mt-6 bg-white p-4 rounded-xl shadow">
+    <input id="fSearch" placeholder="Search reg. no / driver" class="border rounded-lg px-3 py-2 col-span-2 md:col-span-1">
+    <select id="fType" class="border rounded-lg px-3 py-2"><option value="">All types</option><option>Open Body</option><option>Container</option><option>Trailer</option><option>Mini Truck</option></select>
+    <input id="fLoc" placeholder="Location" class="border rounded-lg px-3 py-2">
+    <input id="fCap" type="number" min="0" step="0.5" placeholder="Min capacity (t)" class="border rounded-lg px-3 py-2">
+    <select id="fStatus" class="border rounded-lg px-3 py-2"><option value="">All status</option><option>Available</option><option>Booked</option><option>On Trip</option><option>Maintenance</option></select>
+  </div>
+  <div id="fleetGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-6"></div>
+  <p id="noTrucks" class="hidden text-center text-slate-500 mt-6">No trucks match these filters.</p>
+</section>
+
+<!-- TRACKING -->
+<section id="track" class="bg-navy-900 text-white py-16">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center">Track Your Shipment</h2>
+    <form id="trackForm" class="flex gap-2 mt-6 max-w-xl mx-auto">
+      <input required name="q" placeholder="Booking ID or truck number" class="flex-1 text-slate-900 rounded-lg px-3 py-2 uppercase">
+      <button class="bg-orange-500 hover:bg-orange-600 px-5 rounded-lg font-semibold">Track</button>
+    </form>
+    <div id="trackOut" class="mt-8"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="max-w-6xl mx-auto px-4 py-16 fade-in">
+  <h2 class="text-3xl font-bold text-navy-900 text-center">Our Services</h2>
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-orange-500"><h3 class="font-bold text-lg">Full Truck Load (FTL)</h3><p class="text-slate-600 mt-2 text-sm">Dedicated truck from pickup to delivery for bulk and time-sensitive goods.</p></div>
+    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-orange-500"><h3 class="font-bold text-lg">Part Load (LTL)</h3><p class="text-slate-600 mt-2 text-sm">Share space on our trucks and pay only for what you ship.</p></div>
+    <div class="bg-white p-6 rounded-xl shadow border-t-4 border-orange-500"><h3 class="font-bold text-lg">Fleet Leasing</h3><p class="text-slate-600 mt-2 text-sm">Monthly truck contracts for businesses with regular routes.</p></div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto px-4 fade-in">
+    <h2 class="text-3xl font-bold text-navy-900 text-center">Why Choose Sonu Roadlines?</h2>
+    <div class="grid md:grid-cols-4 gap-6 mt-10 text-center">
+      <div><div class="text-4xl">⏱️</div><h3 class="font-semibold mt-2">On-Time Delivery</h3><p class="text-sm text-slate-500">Scheduled pickups and clear ETAs.</p></div>
+      <div><div class="text-4xl">🛡️</div><h3 class="font-semibold mt-2">Safe Handling</h3><p class="text-sm text-slate-500">Vetted drivers and insured cargo.</p></div>
+      <div><div class="text-4xl">💰</div><h3 class="font-semibold mt-2">Transparent Pricing</h3><p class="text-sm text-slate-500">Estimates shown before you book.</p></div>
+      <div><div class="text-4xl">📍</div><h3 class="font-semibold mt-2">Real-Time Updates</h3><p class="text-sm text-slate-500">Booking status at every step.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="max-w-6xl mx-auto px-4 py-16 fade-in">
+  <h2 class="text-3xl font-bold text-navy-900 text-center">What Our Customers Say</h2>
+  <div class="grid md:grid-cols-3 gap-6 mt-10">
+    <blockquote class="bg-white p-6 rounded-xl shadow text-sm text-slate-600">"Sample testimonial: reliable trucks and on-time pickups every time." <footer class="mt-3 font-semibold text-navy-900">— Sample Customer, Pune</footer></blockquote>
+    <blockquote class="bg-white p-6 rounded-xl shadow text-sm text-slate-600">"Sample testimonial: easy booking and clear communication throughout." <footer class="mt-3 font-semibold text-navy-900">— Sample Customer, Delhi</footer></blockquote>
+    <blockquote class="bg-white p-6 rounded-xl shadow text-sm text-slate-600">"Sample testimonial: our goods arrived safely, and the team was helpful." <footer class="mt-3 font-semibold text-navy-900">— Sample Customer, Surat</footer></blockquote>
+  </div>
+  <p class="text-xs text-slate-400 text-center mt-4">Sample testimonials. Replace with real customer reviews.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-navy-800 text-white py-16">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8">
+    <div>
+      <h2 class="text-3xl font-bold">Contact Us</h2>
+      <p class="mt-4 text-slate-300">📞 +91 00000 00000</p>
+      <p class="text-slate-300">✉️ info@sonuroadlines.example</p>
+      <p class="text-slate-300">📍 Your registered office address, City, State</p>
+      <a href="https://wa.me/910000000000" target="_blank" class="inline-block mt-6 bg-green-600 hover:bg-green-700 px-5 py-3 rounded-lg font-semibold">Chat on WhatsApp</a>
+    </div>
+    <div class="text-sm text-slate-300">
+      <p class="font-semibold text-white">Office Hours</p>
+      <p class="mt-1">Mon – Sat: 9:00 AM – 7:00 PM</p>
+      <p>Sunday: Emergency dispatch only</p>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-navy-900 text-slate-400 text-center text-xs py-6">
+  © <span id="year"></span> SONU ROADLINES. India's Trusted Logistics Partner Since 2009.
+</footer>
+
+<script>
+// ---------- Demo data (clearly marked) ----------
+const TRUCKS = [
+  { reg:'DEMO-MH12-0001', type:'Open Body',  cap:9,  loc:'Pune',      dest:'Mumbai',    driver:'Demo Driver A', phone:'+91 00000 00001', status:'Available' },
+  { reg:'DEMO-GJ05-0002', type:'Container',  cap:16, loc:'Surat',     dest:'Delhi',     driver:'Demo Driver B', phone:'+91 00000 00002', status:'On Trip' },
+  { reg:'DEMO-DL01-0003', type:'Trailer',    cap:25, loc:'Delhi',     dest:'Jaipur',    driver:'Demo Driver C', phone:'+91 00000 00003', status:'Booked' },
+  { reg:'DEMO-KA01-0004', type:'Mini Truck', cap:2.5,loc:'Bengaluru', dest:'Mysuru',    driver:'Demo Driver D', phone:'+91 00000 00004', status:'Available' },
+  { reg:'DEMO-TN09-0005', type:'Container',  cap:18, loc:'Chennai',   dest:'Coimbatore',driver:'Demo Driver E', phone:'+91 00000 00005', status:'Maintenance' },
+  { reg:'DEMO-UP14-0006', type:'Trailer',    cap:30, loc:'Lucknow',   dest:'Kolkata',   driver:'Demo Driver F', phone:'+91 00000 00006', status:'Available' }
+];
+const STATUS_COLORS = { 'Available':'bg-green-100 text-green-800','Booked':'bg-blue-100 text-blue-800','On Trip':'bg-orange-100 text-orange-800','Maintenance':'bg-red-100 text-red-800' };
+const STEPS = ['Pending','Confirmed','Truck Assigned','In Transit','Delivered'];
+
+// ---------- Language ----------
+const T = {
+  en: { book:'Book a Truck Online' },
+  hi: { book:'ऑनलाइन ट्रक बुक करें' }
+};
+function setLang(l){ document.getElementById('lang').value=l; document.querySelector('#book h2').textContent = T[l].book; localStorage.setItem('sr_lang', l); }
+
+// ---------- Helpers ----------
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const RATE = { 'Open Body':32, 'Container':38, 'Trailer':45, 'Mini Truck':18 };
+const loadBookings = () => JSON.parse(localStorage.getItem('sr_bookings') || '[]');
+const saveBookings = b => localStorage.setItem('sr_bookings', JSON.stringify(b));
+
+// ---------- Fleet ----------
+function renderFleet(){
+  const q = $('#fSearch').value.toLowerCase(), t = $('#fType').value, l = $('#fLoc').value.toLowerCase(),
+        c = parseFloat($('#fCap').value) || 0, s = $('#fStatus').value;
+  const list = TRUCKS.filter(x =>
+    (!q || x.reg.toLowerCase().includes(q) || x.driver.toLowerCase().includes(q)) &&
+    (!t || x.type===t) && (!l || x.loc.toLowerCase().includes(l)) &&
+    x.cap >= c && (!s || x.status===s));
+  $('#noTrucks').classList.toggle('hidden', list.length>0);
+  $('#fleetGrid').innerHTML = list.map(x => `
+    <div class="bg-white rounded-xl shadow p-5 hover:-translate-y-1 transition">
+      <div class="flex justify-between items-start">
+        <div>
+          <div class="font-mono font-bold text-navy-900">${esc(x.reg)}</div>
+          <span class="text-[10px] bg-slate-200 text-slate-600 px-2 py-0.5 rounded">DEMO DATA</span>
+        </div>
+        <span class="text-xs px-2 py-1 rounded-full ${STATUS_COLORS[x.status]}">${x.status}</span>
+      </div>
+      <div class="flex items-center gap-3 my-4">
+        <svg width="64" height="40" viewBox="0 0 64 40"><rect x="2" y="8" width="38" height="22" rx="3" fill="#f97316"/><path d="M42 16h12l8 8v6H42z" fill="#0b1f3a"/><circle cx="14" cy="32" r="4" fill="#0b1f3a"/><circle cx="50" cy="32" r="4" fill="#0b1f3a"/></svg>
+        <div class="text-sm"><div><b>Type:</b> ${x.type}</div><div><b>Capacity:</b> ${x.cap} t</div></div>
+      </div>
+      <div class="text-sm space-y-1">
+        <div><b>Current:</b> ${esc(x.loc)}</div>
+        <div><b>Destination:</b> ${esc(x.dest)}</div>
+        <div><b>Driver:</b> ${esc(x.driver)} · <a class="text-orange-600" href="tel:${esc(x.phone.replace(/\s/g,''))}">${esc(x.phone)}</a></div>
+        <div class="text-xs text-slate-500">📡 Live GPS: not connected</div>
+      </div>
+    </div>`).join('');
+}
+['fSearch','fType','fLoc','fCap','fStatus'].forEach(id => $('#'+id).addEventListener('input', renderFleet));
+
+// ---------- Booking ----------
+$('#bookingForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(e.target));
+  const id = 'SR-' + Math.floor(1000 + Math.random()*9000);
+  const bookings = loadBookings();
+  bookings.push({ id, ...f, status:'Pending', created: new Date().toISOString() });
+  saveBookings(bookings);
+  $('#newId').textContent = id;
+  $('#bookingResult').classList.remove('hidden');
+  e.target.reset(); $('#estimate').textContent = '₹ --';
+});
+function updateEstimate(){
+  const f = $('#bookingForm'); const km = parseFloat(f.km.value), t = f.type.value;
+  if (!km || km<=0) { $('#estimate').textContent='₹ --'; return; }
+  const amt = Math.round(km * RATE[t] + 500);
+  $('#estimate').textContent = '₹ ' + amt.toLocaleString('en-IN') + ' (indicative)';
+}
+$('#bookingForm').addEventListener('input', updateEstimate);
+
+function stepsHTML(current){
+  const idx = STEPS.indexOf(current);
+  return `<div class="flex flex-wrap gap-2 mt-3">${STEPS.map((s,i)=>
+    `<span class="step text-xs px-3 py-1 rounded-full bg-slate-200 text-slate-600 ${i<=idx && idx>=0 ? 'done':''}">${s}</span>`).join('')}</div>`;
+}
+$('#statusForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const id = e.target.id.value.trim().toUpperCase();
+  const b = loadBookings().find(x => x.id === id);
+  $('#statusOut').innerHTML = b
+    ? `<div class="bg-white p-4 rounded-xl shadow"><div class="font-mono font-bold">${b.id}</div><div>${esc(b.pickup)} → ${esc(b.delivery)} · ${esc(b.date)}</div><div>Status: <b>${b.status}</b></div>${stepsHTML(b.status)}</div>`
+    : `<div class="text-red-600">No booking found on this device with ID ${esc(id)}.</div>`;
+});
+
+// ---------- Tracking ----------
+$('#trackForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const q = e.target.q.value.trim().toUpperCase();
+  const booking = loadBookings().find(x => x.id === q);
+  const truck = TRUCKS.find(x => x.reg.toUpperCase() === q);
+  if (!booking && !truck) {
+    $('#trackOut').innerHTML = `<div class="text-center text-red-300">No booking or truck found for "${esc(q)}".</div>`;
+    return;
+  }
+  const info = booking
+    ? { label:'Booking '+booking.id, from:booking.pickup, to:booking.delivery, status:booking.status, truck:'Not assigned yet' }
+    : { label:'Truck '+truck.reg, from:truck.loc, to:truck.dest, status:truck.status, truck:truck.reg };
+  $('#trackOut').innerHTML = `
+    <div class="bg-white text-slate-800 rounded-2xl p-6 shadow-xl">
+      <div class="flex justify-between flex-wrap gap-2"><div class="font-bold">${esc(info.label)}</div>
+        <span class="text-[10px] bg-amber-100 text-amber-800 px-2 py-1 rounded">DEMO MODE: no GPS connected</span></div>
+      <div class="grid md:grid-cols-2 gap-4 mt-4 text-sm">
+        <div><b>Pickup:</b> ${esc(info.from)}</div><div><b>Destination:</b> ${esc(info.to)}</div>
+        <div><b>Truck:</b> ${esc(info.truck)}</div><div><b>Status:</b> ${esc(info.status)}</div>
+      </div>
+      <div class="mt-4 h-40 rounded-xl bg-slate-100 flex items-center justify-center text-slate-500 text-sm text-center px-4">
+        Live map location appears here once GPS is connected. Google Maps is not loaded in demo mode.
+      </div>
+      <p class="text-xs text-slate-500 mt-3">ETA: not available until GPS tracking is connected.</p>
+      ${booking ? stepsHTML(booking.status) : ''}
+    </div>`;
+});
+
+// ---------- Animations & counters ----------
+const io = new IntersectionObserver(entries => entries.forEach(en => {
+  if (en.isIntersecting) {
+    en.target.classList.add('show');
+    en.target.querySelectorAll('[data-count]').forEach(el => {
+      const target = +el.dataset.count; let n = 0; const step = Math.ceil(target/60);
+      const t = setInterval(() => { n += step; if (n >= target) { n = target; clearInterval(t); } el.textContent = n.toLocaleString('en-IN') + (target>100?'+':''); }, 25);
+    });
+    io.unobserve(en.target);
+  }
+}), { threshold: .2 });
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+// ---------- Init ----------
+$('#year').textContent = new Date().getFullYear();
+renderFleet();
+setLang(localStorage.getItem('sr_lang') || 'en');
+</script>
+</body>
+</html>
